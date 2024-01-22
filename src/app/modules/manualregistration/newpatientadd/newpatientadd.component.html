@@ -1,0 +1,304 @@
+<div class="outer-container">
+    <div class="inner-container">
+        <div class="centered-content ">
+            <div class="card pageTop pageBottom" id="mainbox">
+                <div class="card-header docs-primary-header" id="mainheader">
+                    <div class="row" id="cHeader">
+                        <div class="col-sm-12 col-30 right" id="mainheader">
+                            <mat-button-toggle-group id="group" #group="matButtonToggleGroup">
+                                <mat-button-toggle id="iButton" (click)='dialogClose()'>
+                                    <mat-icon id="iconButton" style="color: red;">clear</mat-icon>
+                                </mat-button-toggle>
+                            </mat-button-toggle-group>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="card cardTop">
+                        <div
+                            class="flex flex-col sm:flex-row flex-0 sm:items-center sm:justify-between p-4 pb-10 sm:pt-1 sm:pb-5 sm:px-4 bg-default dark:bg-transparent">
+                            <div class="flex min-w-0">
+                                <div class="mt">
+                                    <h2 class="text-3xl md:text-3xl  tracking-tight leading-6 sm:leading-7 truncate">
+                                        New Patient Details
+                                    </h2>
+                                </div>
+                            </div>
+                            <div class="flex shrink-0 items-center mt-1 sm:mt-0 sm:ml-1">
+                                <button mat-stroked-button style="color: #d40040;">
+                                    <mat-icon style="color: #d40040;" class="icon-size-5 mr-2"
+                                        [svgIcon]="'mat_outline:delete'"></mat-icon>
+                                    Discard
+                                </button>&nbsp;&nbsp;&nbsp;&nbsp;
+                                <button mat-stroked-button style="color: #179c7b;">
+                                    <mat-icon style="color: #179c7b;" class="icon-size-5 mr-2"
+                                        [svgIcon]="'mat_outline:save_alt'"></mat-icon>
+                                    Finalize
+                                </button>
+                            </div>
+                        </div>
+
+
+                        <div
+                            class="flex-auto  -mt-2 p-6 sm:p-5 rounded-t-2xl shadow overflow-y-auto bg-card bg-default">
+                            <mat-card class=" rounded-2xl ">
+                                <mat-card-content>
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-sm-3">
+                                                <label id="labelDis" for="label">IC#</label>
+                                                <input id="ic#" type="text" class="form-control"
+                                                    aria-describedby="emailHelp" maxlength="100" autocomplete="off">
+                                            </div>
+                                            <div class="col-sm-3">
+                                                <label id="labelDis" for="label"><strong></strong></label>
+                                                <select id="branch" class="form-select"
+                                                    aria-label="Default select example">
+                                                    <option disabled [value]=0>-- select --</option>
+
+                                                </select>
+                                            </div>
+                                            <div class="col-sm-3">
+                                                <label id="labelDis" for="label">HRN</label>
+                                                <input id="hrn" type="text" class="form-control"
+                                                    aria-describedby="emailHelp" maxlength="100" autocomplete="off">
+                                            </div>
+                                            <div class="col-sm-3 ">
+                                                <!-- <label id="labelDis" for="label">Nursing</label>
+                                                <select id="service" class="form-select"
+                                                    aria-label="Default select example">
+                                                    <option disabled [value]=0>-- select --</option>
+
+                                                </select> -->
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm-3">
+                                                <label id="labelDis" for="label">Title </label>
+                                                <select id="branch" class="form-select"
+                                                    aria-label="Default select example">
+                                                    <option disabled [value]=0>-- select --</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-sm-9">
+                                                <label id="labelDis" for="label"><strong></strong></label>
+                                                <input id="hrn" type="text" class="form-control"
+                                                    aria-describedby="emailHelp" maxlength="100" autocomplete="off">
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm-3">
+                                                <label id="labelDis" for="label">Gender</label>
+                                                <input id="ic#" type="text" class="form-control"
+                                                    aria-describedby="emailHelp" maxlength="100" autocomplete="off">
+                                            </div>
+                                            <div class="col-sm-3">
+                                                <label id="labelDis" for="label">DOB</label>
+                                                <input id="hrn" type="text" class="form-control"
+                                                    aria-describedby="emailHelp" maxlength="100" autocomplete="off">
+                                            </div>
+                                            <div class="col-sm-3">
+                                                <label id="labelDis" for="label">Age</label>
+                                                <input id="hrn" type="text" class="form-control"
+                                                    aria-describedby="emailHelp" maxlength="100" autocomplete="off">
+                                            </div>
+                                            <div class="col-sm-3 ">
+                                                <!-- <label id="labelDis" for="label">Nursing</label>
+                                                <select id="service" class="form-select"
+                                                    aria-label="Default select example">
+                                                    <option disabled [value]=0>-- select --</option>
+
+                                                </select> -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                 
+                                        <ng-template mat-tab-label style="color: #0075d4;">
+                                            <mat-icon svgIcon="assignment_ind" style="color: #0075d4;"></mat-icon>
+                                            <strong style="color: #0075d4;"> Personal Profile</strong>
+                                        </ng-template>
+                                        <mat-list-item style="font-size:large;font-weight: 700;">Personal
+                                            Details</mat-list-item>
+                                        <mat-divider></mat-divider>
+                                        <div class="card-body">
+                                            <div class="row">
+                                                <div class="col-sm-3">
+                                                    <label id="labelDis" for="label">Religion</label>
+                                                    <select id="branch" class="form-select"
+                                                        aria-label="Default select example">
+                                                        <option disabled [value]=0>-- select --</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-sm-3">
+                                                    <label id="labelDis" for="label">Blood Group</label>
+                                                    <select id="branch" class="form-select"
+                                                        aria-label="Default select example">
+                                                        <option disabled [value]=0>-- select --</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-sm-3">
+                                                    <label id="labelDis" for="label">Place Of Birth</label>
+                                                    <select id="branch" class="form-select"
+                                                        aria-label="Default select example">
+                                                        <option disabled [value]=0>-- select --</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-sm-3 ">
+                                                    <label id="labelDis" for="label">Patient Type</label>
+                                                    <select id="branch" class="form-select"
+                                                        aria-label="Default select example">
+                                                        <option disabled [value]=0>-- select --</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="row Top">
+                                                <div class="col-sm-3">
+                                                    <label id="labelDis" for="label">Nationality</label>
+                                                    <select id="branch" class="form-select"
+                                                        aria-label="Default select example">
+                                                        <option disabled [value]=0>-- select --</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-sm-4">
+                                                    <label id="labelDis" for="label">Email</label>
+                                                    <input id="hrn" type="text" class="form-control"
+                                                    aria-describedby="emailHelp" maxlength="100" autocomplete="off">
+                                                </div>
+                                                <div class="col-sm-2">
+                                                    <label id="labelDis" for="label">Race</label>
+                                                    <select id="branch" class="form-select"
+                                                        aria-label="Default select example">
+                                                        <option disabled [value]=0>-- select --</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-sm-3 ">
+                                                    <label id="labelDis" for="label">Language Spoken</label>
+                                                    <select id="branch" class="form-select"
+                                                        aria-label="Default select example">
+                                                        <option disabled [value]=0>-- select --</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="row Top">
+                                                <div class="col-sm-3">
+                                                    <label id="labelDis" for="label">Education</label>
+                                                    <select id="branch" class="form-select"
+                                                        aria-label="Default select example">
+                                                        <option disabled [value]=0>-- select --</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-sm-3">
+                                                    <label id="labelDis" for="label">Occupation</label>
+                                                    <select id="branch" class="form-select"
+                                                        aria-label="Default select example">
+                                                        <option disabled [value]=0>-- select --</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-sm-3">
+                                                    <label id="labelDis" for="label">Hand Phone</label>
+                                                    <select id="branch" class="form-select"
+                                                        aria-label="Default select example">
+                                                        <option disabled [value]=0>-- select --</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-sm-3 ">
+                                                    <label id="labelDis" for="label">Martial Status</label>
+                                                    <select id="branch" class="form-select"
+                                                        aria-label="Default select example">
+                                                        <option disabled [value]=0>-- select --</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    
+                                    
+                                        <ng-template mat-tab-label style="color: #0075d4;">
+                                            <mat-icon svgIcon="assignment" style="color: #0075d4;"></mat-icon>
+                                            <strong style="color: #0075d4;">Address</strong>
+                                        </ng-template>
+                                        <mat-list-item style="font-size:large;font-weight: 700;">Address's</mat-list-item>
+                                        <mat-divider></mat-divider>
+                                        <div class="card-body">
+                                            <div class="row">
+                                                <div class="col-sm-3">
+                                                    <label id="labelDis" for="label">Line 1</label>
+                                                    <input id="hrn" type="text" class="form-control" aria-describedby="emailHelp"
+                                                        maxlength="100" autocomplete="off">
+                                                </div>
+                                                <div class="col-sm-2">
+                                                    <label id="labelDis" for="label">Line 2</label>
+                                                    <input id="hrn" type="text" class="form-control" aria-describedby="emailHelp"
+                                                        maxlength="100" autocomplete="off">
+                                                </div>
+                                                <div class="col-sm-3">
+                                                    <label id="labelDis" for="label">Line 3</label>
+                                                    <input id="hrn" type="text" class="form-control" aria-describedby="emailHelp"
+                                                        maxlength="100" autocomplete="off">
+                                                </div>
+                                                <div class="col-sm-3 ">
+                                                    <label id="labelDis" for="label">Line 4</label>
+                                                    <input id="hrn" type="text" class="form-control" aria-describedby="emailHelp"
+                                                        maxlength="100" autocomplete="off">
+                                                </div>
+                                            </div>
+                                            <div class="row Top">
+                                                <div class="col-sm-3">
+                                                    <label id="labelDis" for="label">PostalCode</label>
+                                                    <input id="hrn" type="text" class="form-control" aria-describedby="emailHelp"
+                                                        maxlength="100" autocomplete="off">
+                                                </div>
+                                                <div class="col-sm-4">
+                                                    <label id="labelDis" for="label">Statecode</label>
+                                                    <input id="hrn" type="text" class="form-control" aria-describedby="emailHelp"
+                                                        maxlength="100" autocomplete="off">
+                                                </div>
+                                                <div class="col-sm-2">
+                                                    <label id="labelDis" for="label">City</label>
+                                                    <input id="hrn" type="text" class="form-control" aria-describedby="emailHelp"
+                                                        maxlength="100" autocomplete="off">
+                                                </div>
+                                                <div class="col-sm-2 ">
+                                                    <label id="labelDis" for="label">Country Code</label>
+                                                    <input id="hrn" type="text" class="form-control" aria-describedby="emailHelp"
+                                                        maxlength="100" autocomplete="off">
+                                                </div>
+                                            </div>
+                                            <div class="row Top">
+                                                <div class="col-sm-3">
+                                                    <label id="labelDis" for="label">Telephone 1</label>
+                                                    <input id="hrn" type="text" class="form-control" aria-describedby="emailHelp"
+                                                        maxlength="100" autocomplete="off">
+                                                </div>
+                                                <div class="col-sm-3">
+                                                    <label id="labelDis" for="label">Telephone 1</label>
+                                                    <input id="hrn" type="text" class="form-control" aria-describedby="emailHelp"
+                                                        maxlength="100" autocomplete="off">
+                                                </div>
+                                                <div class="col-sm-3">
+                                                    <label id="labelDis" for="label">Address Type</label>
+                                                    <input id="hrn" type="text" class="form-control" aria-describedby="emailHelp"
+                                                        maxlength="100" autocomplete="off">
+                                                </div>
+                                                <!-- <div class="col-sm-2 Top right">
+                                                    <button mat-raised-button style="background-color:rgb(15, 204, 211);color:white">
+                                                        <i class="far fa-plus-square"></i> Add </button>
+                                                </div> -->
+                                            </div>
+                                        </div>
+                                    
+                               
+                                </mat-card-content>
+
+                            </mat-card>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+        </div>
+    </div>
+</div>
