@@ -266,7 +266,7 @@ width: 100%;
 }
 mat-form-field {
   margin-right: 12px;
-  width: 219px;
+  // width: 219px;
 }
 .example-action-buttons {
   padding-bottom: 20px;
@@ -370,6 +370,7 @@ ul {
   display: inline-block;
   position: relative;
   max-width: 100%;
+  width: 100%;
   text-align: left;
   background-color: white;
 }
@@ -379,9 +380,9 @@ ul {
   justify-content: space-between;
 }
 
-.grid-item {
-  flex-basis: calc(50% - 5px); /* Adjust the value based on your desired spacing */
-}
+// .grid-item {
+//   flex-basis: calc(50% - 5px); /* Adjust the value based on your desired spacing */
+// }
 
 .headeADR {
   background: #c8dff8;

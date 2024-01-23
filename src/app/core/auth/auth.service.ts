@@ -78,7 +78,7 @@ export class AuthService
 
                 // Store the access token in the local storage
                 // this.accessToken = response.accessToken;
-                this.accessToken = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjB4MzEzNDM0MzdCMEE2RjcxQS0yRkM0LTRENTYtOTcwOS1EOTlBMjQ1REYyQkIiLCJleHAiOjE3MDU5ODgwMDgsImlzcyI6Iml2aXZhY2FyZS5jb20iLCJhdWQiOiJpdml2YWNhcmUuY29tIn0.alzPyzZzQ3ylClDYUJpA2XKC7tluz8tcKpLUEntpMAo";
+                this.accessToken = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjB4MzEzNDM0MzdCMEE2RjcxQS0yRkM0LTRENTYtOTcwOS1EOTlBMjQ1REYyQkIiLCJleHAiOjE3MDYwNzQ1MjYsImlzcyI6Iml2aXZhY2FyZS5jb20iLCJhdWQiOiJpdml2YWNhcmUuY29tIn0.uF-LiSsqUBb_85QpeRzLolC37jXhu1yeforvZTrRH5k";
 
 
                 // Set the authenticated flag to true
@@ -119,7 +119,7 @@ export class AuthService
                 if ( response.accessToken )
                 {
                     // this.accessToken = response.accessToken;
-                    this.accessToken = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjB4MzEzNDM0MzdCMEE2RjcxQS0yRkM0LTRENTYtOTcwOS1EOTlBMjQ1REYyQkIiLCJleHAiOjE3MDU5ODgwMDgsImlzcyI6Iml2aXZhY2FyZS5jb20iLCJhdWQiOiJpdml2YWNhcmUuY29tIn0.alzPyzZzQ3ylClDYUJpA2XKC7tluz8tcKpLUEntpMAo";
+                    this.accessToken = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjB4MzEzNDM0MzdCMEE2RjcxQS0yRkM0LTRENTYtOTcwOS1EOTlBMjQ1REYyQkIiLCJleHAiOjE3MDYwNzQ1MjYsImlzcyI6Iml2aXZhY2FyZS5jb20iLCJhdWQiOiJpdml2YWNhcmUuY29tIn0.uF-LiSsqUBb_85QpeRzLolC37jXhu1yeforvZTrRH5k";
                 }
 
                 // Set the authenticated flag to true

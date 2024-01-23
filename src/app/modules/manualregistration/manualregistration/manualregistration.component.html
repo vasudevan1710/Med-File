@@ -50,24 +50,30 @@
                         placeholder="Name,HRN">
                 </mat-form-field>
             </div> -->
-           
+            <form name="searchForm" class="form-inline" novalidate>
+                <button mat-button color="primary" type="reset">
+                    Reset
+                </button>
+                <button mat-button color="primary" type="submit">
+                    Search
+                </button>
                 <div class="row">
-                    <div class=" col-sm-3 grid-item">
-                        <mat-form-field appearance="outline" class="search-field" style="width:50%;">
+                    <div class=" col-3 grid-item">
+                        <mat-form-field appearance="outline" >
                             <mat-label>HRN</mat-label>
-                            <input matInput  [(ngModel)]="patientData" (keyup)="searchfield()"
-                                placeholder="Name,HRN">
+                            <input matInput  [(ngModel)]="patientData" (change)="searchfield()"
+                                placeholder="HRN">
                         </mat-form-field>
                     </div>
-                    <div class=" col-sm-3 grid-item">
-                        <mat-form-field appearance="outline" class="search-field" style="width:50%;">
+                    <div class=" col-3 grid-item">
+                        <mat-form-field appearance="outline" >
                             <mat-label>IDNO</mat-label>
-                            <input matInput  [(ngModel)]="patientData" (keyup)="searchfield()"
+                            <input matInput  [(ngModel)]="patientData" (change)="searchfield()"
                                 placeholder="ID No">
                         </mat-form-field>
                     </div>
-                    <div class=" col-sm-3 grid-item">
-                        <mat-form-field appearance="outline" class="search-field" style="width:50%;">
+                    <div class=" col-3 grid-item">
+                        <mat-form-field appearance="outline">
                             <mat-label>IDTYPE</mat-label>
                             <mat-select>
                                 <mat-option *ngFor="let patienttype of pt"[value]="patienttype">{{patienttype.SHORTDESC}}
@@ -77,21 +83,22 @@
                          
                         </mat-form-field>
                     </div>
-                    <div class=" col-sm-3 grid-item">
-                        <mat-form-field appearance="outline" class="search-field" style="width:50%;">
+                    <div class=" col-8 grid-item">
+                        <mat-form-field appearance="outline" >
                             <mat-label>NAME</mat-label>
                             <input matInput  [(ngModel)]="patientName" (keyup)="searchfields()"
                                 placeholder="Name">
                         </mat-form-field>
                     </div>
-                    <div class=" col-sm-3 grid-item">
-                        <mat-form-field appearance="outline" class="search-field" style="width:50%;">
+                    <div class=" col-3 grid-item">
+                        <mat-form-field appearance="outline">
                             <mat-label>TELEPHONE</mat-label>
                             <input matInput  
                                 placeholder="Phone No">
                         </mat-form-field>
                     </div>
                 </div>
+            </form>
             </div>
         </div>
         &nbsp; &nbsp;

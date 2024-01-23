@@ -18,7 +18,7 @@ export class ManualregistrationComponent implements OnInit {
   visitData: any[] = [];
   patientlist: any = [];
   addresslist: any = [];
-  pt:any[]=[];
+ 
   SearchValue: string = '';
   objload: any = {
     HRN: '',
@@ -50,7 +50,8 @@ export class ManualregistrationComponent implements OnInit {
 
   patientData: any ='';
   patientName: any ='';
-
+  pt:any[]=[];
+  
   constructor(
     private _formBuilder: FormBuilder,
     public _matDialog: MatDialog,
@@ -223,8 +224,8 @@ public openDialogNew( data?: any, editflag?: boolean, viewflag?: boolean): void 
       this._ApiCall.getPatientsIDType(search).subscribe((data:any)=>{
         this.pt=data?.Codes?.[search];
         console.log(this.pt)
-      },(error)=>{
-        console.error('error')
+        console.error();
+        
       });
     }
 
